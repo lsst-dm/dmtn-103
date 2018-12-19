@@ -71,6 +71,11 @@ Staging Instance
 
 Later on, as part of the change control process, it is anticipated that a staging instance will be deployed in the Kubernetes Production cluster as a final test before having changes go live in the ``lsst-lsp-stable`` instance.
 
+Kubernetes Test Instance
+------------------------
+
+From time to time, an LSP instance will be deployed in the Kubernetes Test cluster, along with a small (single-node or few-node) Qserv cluster for the purpose of ensuring deployment and operation of the LSP functions correctly in new versions of Kubernetes.
+
 Commissioning
 -------------
 
