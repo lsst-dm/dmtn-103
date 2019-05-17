@@ -24,7 +24,7 @@ Kubernetes Clusters
 
 The LSP is deployed on Kubernetes.
 There are currently two Kubernetes clusters available, both at NCSA: a large one called k8s-prod used for production and a smaller one called k8s-dev used for development.
-A third, tiny Kubernetes cluster, k8s-ncsa, is sometimes configured for testing new Kubernetes versions.
+A third, tiny Kubernetes cluster, k8s-ncsa, is set up from time to time for testing of new Kubernetes versions by NCSA administrators.
 In addition, the cloud-based Google Kubernetes Engine (GKE) is sometimes used for deployments of the LSP.
 
 Deployments in the production cluster, as well as adjustments to its configuration, will be limited and performed after a change control process to ensure stability.
@@ -52,7 +52,7 @@ Image datasets have been provided from ``/datasets`` in the common NCSA GPFS fil
 The User File Workspace for the Notebook Aspect of the instance is also provided from ``/jhome`` in GPFS.
 Authentication is provided via an OAuth proxy that gives single sign-on (SSO) capability.
 
-The ``lsst-lsp-stable`` instance has only had a Notebook Aspect deployed, with image datasets and the User File Workspace from GPFS and authentication via CILogon.
+The ``lsst-lsp-stable`` instance has only had a Notebook Aspect deployed, with image datasets and the User File Workspace from GPFS and authentication via CILogon only (with the NCSA identity provider).
 Recently Portal and Web API Aspects have been deployed in this instance.
 
 At times, "pop-up" deployments of the LSP (just the Notebook Aspect) on GKE have been used to support elastic, short-term usage.
@@ -61,6 +61,11 @@ Images are copied to the cloud and the User File Workspace is also provided ther
 
 Future Deployments
 ==================
+
+Authentication
+--------------
+
+When it has been productionized, single sign-on via the OAuth2 proxy will be deployed to ``lsst-lsp-stable``, also providing federated identities at that time.
 
 Staging Instance
 ----------------
